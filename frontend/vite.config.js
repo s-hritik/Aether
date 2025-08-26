@@ -1,15 +1,21 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import fs from 'fs'
+import { defineConfig } from 'vite';
+import fs from 'fs';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    https: {
-      // These paths are now correct because the files are in the same folder
-      key: fs.readFileSync('./localhost-key.pem'),
-      cert: fs.readFileSync('./localhost.pem'),
-    },
-  },
-})
+export default defineConfig(({ command }) => {
+  const config = {
+    plugins: [react()],
+  };
+
+  // Only add the HTTPS config when running the dev server
+  if (command === 'serve') {
+    config.server = {
+      https: {
+        key: fs.readFileSync('./localhost-key.pem'),
+        cert: fs.readFileSync('./localhost.pem'),
+      },
+    };
+  }
+
+  return config;
+});
