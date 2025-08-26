@@ -4,7 +4,7 @@ dotenv.config({ path: './.env' });
 import http from 'http'; 
 import https from 'https';
 import fs from 'fs';
-import connectDB from './config/database.js';
+import connectDB from './src/config/database.js';
 import { app } from './src/app.js';
 
 connectDB()
