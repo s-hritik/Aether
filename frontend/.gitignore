@@ -58,6 +58,9 @@ web_modules/
 # Optional eslint cache
 .eslintcache
 
+# Local SSL certificates
+*.pem
+
 # Optional stylelint cache
 .stylelintcache
 
