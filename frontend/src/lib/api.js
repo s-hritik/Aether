@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const ApiClient = axios.create({
-    baseURL : import.meta.env.VITE_BACKEND_URL, //my backend url
+    baseURL : `${import.meta.env.VITE_BACKEND_URL}/api/v1`, //my backend url
     withCredentials:true // This is essential for handling auth cookies
 })
 
