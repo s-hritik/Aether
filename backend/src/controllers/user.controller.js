@@ -37,7 +37,9 @@ const refreshAccessToken = AsyncHandler(async (req , res)=>{
 
          const options = {
             httpOnly :true,
-            secure : true
+            secure : true,
+            sameSite: 'none',
+            expires: new Date(Date.now() + 24 * 60 * 60 * 1000)
          }
 
          return res.status(200)
@@ -107,7 +109,9 @@ const loginUser = AsyncHandler(async(req, res) => {
 
      const options = {
         httpOnly :true,
-        secure :true
+        secure :true,
+        sameSite: 'none',
+        expires: new Date(Date.now() + 24 * 60 * 60 * 1000)
      }
 
      return res
@@ -143,6 +147,8 @@ const logoutUser = AsyncHandler(async (req, res)=>{
     const options = {
         httpOnly : true,
         secure : true,
+        sameSite: 'none',
+        expires: new Date(Date.now() + 24 * 60 * 60 * 1000)
     };
 
     return res
