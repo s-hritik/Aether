@@ -29,8 +29,8 @@ function Home() {
    <>
    <div>
     {/* hero section */}
-     <section className='relative h-[600px] bg-gray-900 text-white'>
-         <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1600&auto=format&fit=crop&q=60" alt="Hero" 
+     <section className='relative h-[650px] bg-gray-900 text-white'>
+         <img src="https://res.cloudinary.com/dp8t3hszo/image/upload/v1757007936/WhatsApp_Image_2025-09-04_at_23.14.48_gwdhhl.jpg" alt="Hero" 
          className='absolute inset-0 w-full h-full object-cover opacity-50'/>
          <div className='absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent '>
            <div className='absolute inset-0 flex items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full '> 

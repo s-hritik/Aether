@@ -13,7 +13,7 @@ connectDB()
 
     if (process.env.NODE_ENV === 'production') {
       http.createServer(app).listen(port, () => {
-        console.log(`✅ Server is running on port: ${port}`);
+        console.log(`Server is running on port: ${port}`);
       });
     } else {
       const httpsOptions = {
@@ -21,7 +21,7 @@ connectDB()
         cert: fs.readFileSync('./localhost.pem')
       };
       https.createServer(httpsOptions, app).listen(port, () => {
-        console.log(`✅ Server is running securely on: https://localhost:${port}`);
+        console.log(`Server is running securely on: https://localhost:${port}`);
       });
     }
   })
